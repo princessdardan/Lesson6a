@@ -86,7 +86,7 @@ public class GuessingGame extends javax.swing.JFrame {
 
     private void btnenterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnenterActionPerformed
         // TODO add your handling code here:
-        guess = Interger.parseInt(txtguess.getText());
+        guess = Integer.parseInt(txtguess.getText());
         if(machine.setGuess(guess==true)){
             lblresult.setText(machine.giveHint());
             lblattempts.setText(""+ machine.getNumGuess);
