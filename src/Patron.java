@@ -1,6 +1,6 @@
 public class Patron {
     String name;
-    Boolean b1, b2, b3;
+    Book b1, b2, b3;
     
     public Patron(String n){
         name= n;
@@ -9,7 +9,7 @@ public class Patron {
         b3= null;
     }
     public boolean borrow(Book b){
-        boolean canborrow = (b1==null||b2==null||b3=null);
+        boolean canborrow = (b1 == null || b2 == null || b3 == null);
         if(canborrow){
             if(b1==null) b1= b;
             else if (b2==null)b2=b;
@@ -27,12 +27,15 @@ public class Patron {
     }
     public boolean returnBook(Book b)
     {
-        if(hasbook(b)){
+        if(hasBook(b)){
             if(b1==b)b1=null;
             else if(b2==b)b2=null;
             else b3=null;
             return true;
         }
         else return false;
+    }
+    public String getName(){
+       return name;
     }
 }

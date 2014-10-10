@@ -6,7 +6,7 @@ public class Book {
         author =a;
     }
     public String toString(){
-        return title + "by: "+ author;
+        return title + " by: "+ author;
     }
     public String getTitle(){
         return title;
