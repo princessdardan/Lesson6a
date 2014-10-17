@@ -29,17 +29,17 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                      <Component id="txtguess" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Component id="txtGuess" min="-2" pref="100" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="btnenter" min="-2" pref="66" max="-2" attributes="0"/>
+                      <Component id="btnGuess" min="-2" pref="66" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="lblresult" pref="139" max="32767" attributes="0"/>
-                          <Component id="lblattempts" max="32767" attributes="0"/>
+                          <Component id="lblResult" pref="139" max="32767" attributes="0"/>
+                          <Component id="lblAttempts" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
                   </Group>
@@ -53,14 +53,14 @@
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtguess" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtGuess" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-              <Component id="btnenter" min="-2" pref="29" max="-2" attributes="0"/>
+              <Component id="btnGuess" min="-2" pref="29" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-              <Component id="lblresult" min="-2" pref="18" max="-2" attributes="0"/>
+              <Component id="lblResult" min="-2" pref="18" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="lblattempts" min="-2" pref="19" max="-2" attributes="0"/>
+              <Component id="lblAttempts" min="-2" pref="19" max="-2" attributes="0"/>
               <EmptySpace pref="23" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -72,19 +72,19 @@
         <Property name="text" type="java.lang.String" value="Enter your guess from 1 - 100: "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtguess">
+    <Component class="javax.swing.JTextField" name="txtGuess">
     </Component>
-    <Component class="javax.swing.JButton" name="btnenter">
+    <Component class="javax.swing.JButton" name="btnGuess">
       <Properties>
         <Property name="text" type="java.lang.String" value="Enter "/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnenterActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuessActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblresult">
+    <Component class="javax.swing.JLabel" name="lblResult">
     </Component>
-    <Component class="javax.swing.JLabel" name="lblattempts">
+    <Component class="javax.swing.JLabel" name="lblAttempts">
     </Component>
   </SubComponents>
 </Form>

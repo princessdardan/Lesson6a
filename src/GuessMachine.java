@@ -24,9 +24,10 @@ public class GuessMachine {
             return ". You guessed it";
         }
         else if (guess> num){
-            return ". You guessed too low";
+            return ". You guessed too high";
         }
         else 
-            return ". You guessed too high";
+            return ". You guessed too low";
     }
+    
 }

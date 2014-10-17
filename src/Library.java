@@ -17,29 +17,29 @@ public class Library {
         
         System.out.println("Lending books to "+ p.getName());
         if (p.borrow(b1)) System.out.println (b1.getTitle()+" succesfully borrowed.");
-        else    System.out.println(b1.getTitle()+"could not be borrowed.");
+        else    System.out.println(b1.getTitle()+" could not be borrowed.");
         
         if (p.borrow(b2)) System.out.println (b2.getTitle()+" succesfully borrowed.");
-        else    System.out.println(b2.getTitle()+"could not be borrowed.");
+        else    System.out.println(b2.getTitle()+" could not be borrowed.");
         
         if (p.borrow(b3)) System.out.println (b3.getTitle()+" succesfully borrowed.");
-        else    System.out.println(b3.getTitle()+"could not be borrowed.");
+        else    System.out.println(b3.getTitle()+" could not be borrowed.");
         
         if (p.borrow(b4)) System.out.println (b4.getTitle()+" succesfully borrowed.");
-        else    System.out.println(b4.getTitle()+"could not be borrowed.");
+        else    System.out.println(b4.getTitle()+" could not be borrowed.");
         
         if (p.borrow(b5)) System.out.println (b5.getTitle()+" succesfully borrowed.");
-        else    System.out.println(b5.getTitle()+"could not be borrowed.");
+        else    System.out.println(b5.getTitle()+" could not be borrowed.");
         
         System.out.println("----\nAttempting to return the first book:\n------------");
         if (p.returnBook(b1)) System.out.println(b1.getTitle()+" Successfully returned.");
         else                  System.out.println(b1.getTitle()+" was not borrowed out.");
         System.out.println("----\nHere is a list of books currently lent out to: " + p.getName()+"\n----");
-        if (p.hasBook(b1))System.out.println(b1.getTitle());
-        if (p.hasBook(b1))System.out.println(b2.getTitle());
-        if (p.hasBook(b1))System.out.println(b3.getTitle());
-        if (p.hasBook(b1))System.out.println(b4.getTitle());
-        if (p.hasBook(b1))System.out.println(b5.getTitle());
+        if (p.hasBook(b1))System.out.println(b1);
+        if (p.hasBook(b2))System.out.println(b2);
+        if (p.hasBook(b3))System.out.println(b3);
+        if (p.hasBook(b4))System.out.println(b4);
+        if (p.hasBook(b5))System.out.println(b5);
         
     }
 }

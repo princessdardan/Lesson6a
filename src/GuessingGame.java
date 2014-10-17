@@ -28,19 +28,19 @@ public class GuessingGame extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        txtguess = new javax.swing.JTextField();
-        btnenter = new javax.swing.JButton();
-        lblresult = new javax.swing.JLabel();
-        lblattempts = new javax.swing.JLabel();
+        txtGuess = new javax.swing.JTextField();
+        btnGuess = new javax.swing.JButton();
+        lblResult = new javax.swing.JLabel();
+        lblAttempts = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Enter your guess from 1 - 100: ");
 
-        btnenter.setText("Enter ");
-        btnenter.addActionListener(new java.awt.event.ActionListener() {
+        btnGuess.setText("Enter ");
+        btnGuess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnenterActionPerformed(evt);
+                btnGuessActionPerformed(evt);
             }
         });
 
@@ -54,15 +54,15 @@ public class GuessingGame extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(44, 44, 44)
-                        .addComponent(txtguess, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtGuess, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(42, 42, 42))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnenter, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnGuess, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(134, 134, 134))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(lblresult, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
-                            .addComponent(lblattempts, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(lblResult, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                            .addComponent(lblAttempts, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(102, 102, 102))))
         );
         layout.setVerticalGroup(
@@ -71,27 +71,33 @@ public class GuessingGame extends javax.swing.JFrame {
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtguess, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtGuess, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
-                .addComponent(btnenter, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnGuess, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(lblresult, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblResult, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblattempts, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblAttempts, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnenterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnenterActionPerformed
-        // TODO add your handling code here:
-        guess = Integer.parseInt(txtguess.getText());
-        if(machine.setGuess(guess==true)){
-            lblresult.setText(machine.giveHint());
-            lblattempts.setText(""+ machine.getNumGuess);
-        }
-    }//GEN-LAST:event_btnenterActionPerformed
+    private void btnGuessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuessActionPerformed
+     int number = Integer.parseInt(txtGuess.getText());
+        if (machine.setGuess(number)) {
+            lblResult.setText("You guessed " + number + machine.giveHint());
+            lblAttempts.setText("" + machine.getNumGuess());
+        }        
+        else {
+            lblResult.setText("Invalid guess");
+                }
+        if (machine.giveHint().equals (". You got it!"))
+                btnGuess.setEnabled(false);   
+     
+      
+    }//GEN-LAST:event_btnGuessActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,10 +135,10 @@ public class GuessingGame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnenter;
+    private javax.swing.JButton btnGuess;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lblattempts;
-    private javax.swing.JLabel lblresult;
-    private javax.swing.JTextField txtguess;
+    private javax.swing.JLabel lblAttempts;
+    private javax.swing.JLabel lblResult;
+    private javax.swing.JTextField txtGuess;
     // End of variables declaration//GEN-END:variables
 }
